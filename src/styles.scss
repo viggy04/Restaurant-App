@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$border1:red 2px solid;
+$border2:green 2px solid;
+$border3:blue 2px solid;
+$border4:yellow 2px solid;
+$border5:purple 2px solid;
+
+*{
+    box-sizing: border-box;
+    
+}
+
+h1{
+    font-family: sans-serif;
+    font-size: 10px;
+    border:$border1;
+    padding:20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

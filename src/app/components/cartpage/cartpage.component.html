@@ -1,0 +1,76 @@
+<!-- <ul>
+    <li *ngFor="let cartItem of cart.items">
+        <div>
+            <img [src]="cartItem.food.imageUrl" alt="">
+        </div>
+        <div>
+            <a routerLink="/food/{{cartItem.food.id}}">
+                {{cartItem.food.name}}
+            </a>
+        </div>
+        <div>
+            <select #qtySelect (change)="changeQty(cartItem,qtySelect.value)" >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div>
+            {{cartItem.price}}
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="removeFromCart(cartItem)" >Remove</button>
+        </div>
+    </li>
+</ul>
+
+
+<div class="checkout">
+    <div class="food-count">
+        {{cart.items.length}}
+    </div>
+    <div class="total-price">
+        {{cart.totalPrice}}
+    </div>
+</div> -->
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartItem of cart.items;let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td> <img [src]="cartItem.food.imageUrl" alt="" style="width:100px ;"> </td>
+                <td> {{cartItem.food.name}} </td>
+                <td> <select #qtySelect (change)="changeQty(cartItem,qtySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select> </td>
+                <td>{{cartItem.price}}</td>
+                <td> <button class="btn btn-primary" (click)="removeFromCart(cartItem)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+    <div class="item1">
+        <div *ngFor="let ct of cart.items" >
+            {{ct.price | currency}}
+            <p>{{ct.quantity}}</p>
+        </div>
+    </div>

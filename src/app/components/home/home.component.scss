@@ -1,0 +1,70 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding:0px; 
+    // border:3px red solid;
+    width:fit-content;
+    float:left;
+    margin-left:100px;
+    
+}
+
+.example-card{
+    height: 400px;
+    width: 400px;
+    // border:2px green solid;
+    border-radius: 10px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color:green;
+}
+
+.example-card {
+    padding:10px;
+    margin:10px;
+    &:hover{
+      opacity: 0.8;
+      cursor:pointer;
+    }
+  }
+  
+  .example-header-image {
+    // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .foodImg{
+    height: 300px;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.favourite{
+  padding:10px;
+  position: relative;
+  left:200px;
+  font-size: 30px;
+}  
+
+.cooktime{
+  // border:3px red solid;
+  position: relative;
+  left:250px;
+  font-size:20px;
+}
+
+.price{
+  font-size: 30px;
+}
+
+.rating{
+  padding-top: 20px;
+}
